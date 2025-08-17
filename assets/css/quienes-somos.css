@@ -1,0 +1,36 @@
+body {
+  background-color: #f5e6d3;
+  color: #4a3728;
+  font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.main-content {            
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;   
+}
+   
+.page-title {
+  text-align: center;  
+  font-size: 36px;
+  margin-bottom: 30px;  
+  color: #6d4c2f;
+        }
+        
+.content-section {
+  background-color: white;
+  margin: 30px 0;
+  padding: 30px;
+  border-radius: 10px;}
+
+.section-title {
+  font-size: 24px;
+  color: #8b6f47;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c49580;
+  padding-bottom: 5px;}
+
+   h3 {
+    font-size: 18px;
+   }
