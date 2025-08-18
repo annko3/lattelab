@@ -34,3 +34,41 @@ body {
    h3 {
     font-size: 18px;
    }
+
+ @media (max-width: 991px) {    .container{  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+ }
+  .personauno{  font-size: 14px; color: #6d4c2f;
+    margin-bottom: 5px;
+    
+  }
+    .personados{  font-size: 14px; color: #8c5627;
+    margin-bottom: 5px;
+    
+  }
+    .personatres{  font-size: 14px; color: #d0833f;
+    margin-bottom: 5px;
+    
+  }
+  
+
+
+}
+@media (max-width: 845px) {container{  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+ }
+
+}
+@media (max-width: 690px) {container{  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+ }
+
+}
