@@ -11,12 +11,12 @@ html {
     background: #ddb899;
 }
 
-.container-hero {
+.header-container {
     background-color: #ddb899; 
     padding: 10px 30px;
 }
 
-.container-logo {
+.logo-container {
     display: flex;
     align-items: center;
     font-size: 22px;
@@ -24,7 +24,7 @@ html {
     padding: 15px 0;
 }
 
-.container-logo i {
+.logo-container i {
     margin-right: 8px;
     color: #5c4033; 
 }

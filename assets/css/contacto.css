@@ -1,3 +1,4 @@
+/* Variables */
 :root {
   --beige: #ddb899;
   --brown-medium: #7b5232;
@@ -8,6 +9,8 @@
   --background-alt: #f0e6dd;
   --white: #fff;
 }
+
+/* Base styles */
 body {
   background-color: var(--background);
   color: var(--brown-dark);
@@ -18,41 +21,9 @@ body {
 main, section {
   display: block;
 }
+
 section {
   padding: 64px 0;
-}
-
-/* Header */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 10%;
-  background: var(--white);
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.navbar-container .menu {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu a {
-  text-decoration: none;
-  color: var(--brown-dark);
-  font-weight: 500;
-}
-
-.menu a[aria-current="page"] {
-  color: var(--red);
 }
 
 /* Hero */
@@ -64,267 +35,235 @@ section {
 }
 
 .hero-container {
-    display: grid;
-    gap: 1rem;
-    padding: 0 21%;
-    justify-items: center;
+  display: grid;
+  gap: 1rem;
+  padding: 0 21%;
+  justify-items: center;
 }
+
 .hero-container img {
-    width: 60%;
-    border-radius: 20px;
-}
-.hero p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.7;
-}
-h1 {
-    margin: 0;
+  width: 60%;
+  border-radius: 20px;
 }
 
-
-
-#contacto {
-    text-align: center;
-    background-color: #F0E6DD;
-}
-.contacto-metodo, 
-#contacto-metodo {
-  background-color: white; 
-  border: 2px solid var(--cafe-rosado);
-}
-.container-contacto {
-    padding: 0 25%;
-    display: grid;
-    grid-template-rows: 1fr ;
-    gap: 2rem;
-    justify-content: center;
-}
-.contacto-div {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: row;
-    gap: 2rem;
-}
-.fila {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.contacto-metodo {
-    display: grid;
-    border: 2px solid black;
-    padding: 2rem;
-    height: 250px; 
-    border-radius: 20px;
-}
-#contacto-metodo {
-    border: 2px solid black;
-    padding: 2rem;
-    height: auto; 
-    width: 100%;
-    border-radius: 20px;
-
-}
-p {
-    margin: 0;
-}
-h3 {
-    margin: 0;
-}
-h2 {
-    margin-bottom: 2rem;
+.hero-section h1 {
+  margin: 0;
 }
 
-#equipo {
-    text-align: center;
-    padding: 64px 0;
-    background-color: #F8F4EF;
-}
-.equipo-container {
-    padding: 0 15%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) ;
-    gap: 2rem;
-}
-.persona{
-    background-color: white;
-    border: 2px solid var(--cafe-rosado);
-    padding: 2rem;
-    height: auto;
-    border-radius: 20px;
+.hero-section p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
-.btn {
-    background-color: var(--cafe-medio);
-    color: white;  
-    border-color: var(--cafe-oscuro);  
-}
-.btn:hover {
-    background-color: var(--cafe-oscuro);
-    border-color: var(--cafe-medio);
+/* Contact */
+#contact {
+  text-align: center;
+  background-color: var(--background-alt);
 }
 
+.contact-container {
+  padding: 0 10%;
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+}
 
+.contact-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-method {
+  background-color: var(--white);
+  border: 2px solid var(--brown-pink);
+  padding: 2rem;
+  border-radius: 20px;
+  height: 250px;
+  display: grid;
+  align-items: start;
+}
+
+.contact-social {
+  background-color: var(--white);
+  border: 2px solid var(--brown-pink);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.contact-social .fa-brands {
+  color: var(--brown-medium);
+}
+
+.email {
+  color: var(--red);
+}
+
+/* Team */
+#team {
+  text-align: center;
+  padding: 64px 0;
+  background-color: var(--background);
+}
+
+.team-container {
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  background-color: var(--white);
+  border: 2px solid var(--brown-pink);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.team-member img {
+  width: 35%;
+  background-color: #f0f8ff;
+  border-radius: 50%;
+}
+
+.team-member h3, .team-member p {
+  padding: 3px;
+}
+
+/* FAQ */
 #faq {
-    padding: 64px 0;
-    text-align: center;
-    background-color: #F0E6DD;
-}
-.preguntas-container {
-    display: flex;
-    flex-direction: row;
-    flex: 2;
-    gap: 3rem;
-    padding: 0 15%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+  padding: 64px 0;
+  text-align: center;
+  background-color: var(--background-alt);
 }
 
-.contenedorfaq {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2rem;
-    width: 50%;
+.faq-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 0 10%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+  width: 50%;
 }
 
 .faq-item {
-    padding: 1.5rem 0.5rem;
-    border-radius: 10px;
-    height: auto;
-    width: 100%;
-    background-color: white;
+  padding: 1.5rem 0.5rem;
+  border-radius: 10px;
+  background-color: var(--white);
+  border: 2px solid var(--brown-pink);
+  width: 100%;
 }
+
 .faq-item h3 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
+
 h2, h3 {
-  color: var(--cafe-oscuro);
-}
-.persona, .contacto-metodo, #contacto-metodo, .faq-item {
-  border: 2px solid var(--cafe-rosado);
-}
-
-#contacto-metodo .fa-brands {
-  color: var(--cafe-medio);
-}
-
-.correo {
-    color: var(--rojo);
-}
-
-.persona img {
-    width: 35%;
-    background-color: aliceblue;
-    border-radius: 50%;
-}
-
-.persona h3, p {
-    padding: 3px;
+  color: var(--brown-dark);
+  margin-bottom: 2rem;
 }
 
 span {
-    color: var(--rojo);
-    font-weight: bold;
+  color: var(--red);
+  font-weight: bold;
 }
 
+/* Buttons */
+.btn {
+  background-color: var(--brown-medium);
+  color: var(--white);
+  border-color: var(--brown-dark);
+}
 
+.btn:hover {
+  background-color: var(--brown-dark);
+  border-color: var(--brown-medium);
+}
 
+/* Responsive */
 @media (max-width: 991px) {
-    .hero-container,
-    .container-contacto,
-    .preguntas-container {
-        padding: 0 10% !important;
-    }
-  
-    .equipo-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .contacto-div {
-        flex-direction: row;
-        gap: 2rem;
-    }
-    
-    .fila {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .preguntas-container {
-        flex-direction: column;
-    }
-    
-    .contenedorfaq {
-        width: 100%;
-    }
+  .hero-container,
+  .contact-container,
+  .faq-container {
+    padding: 0 5% !important;
+  }
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .faq-container {
+    flex-direction: column;
+  }
+  .faq-list {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
-    section {
-        padding: 40px 0;
-    }
-    
-    .hero {
-        height: auto;
-        padding: 40px 0;
-    }
-    
-    .hero-container {
-        padding: 0 5% !important;
-    }
-    
-    
-    .equipo-container {
-        grid-template-columns: 1fr;
-        padding: 0 5%;
-    }
-    
-    .container-contacto {
-        padding: 0 5%;
-    }
-    
-    .fila {
-        flex-direction: column;
-    }
-    
-    .contacto-metodo,
-    #contacto-metodo {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
-    }
-    
-    .preguntas-container {
-        padding: 0 5%;
-    }
-    
-    .persona img {
-        width: 40%;
-    }
+  section {
+    padding: 40px 0;
+  }
+  .hero-section {
+    padding: 40px 0;
+  }
+  .hero-container {
+    padding: 0 2% !important;
+  }
+  .team-container {
+    grid-template-columns: 1fr;
+    padding: 0 2%;
+  }
+  .contact-container {
+    padding: 0 2%;
+  }
+  .contact-method,
+  .contact-social {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .faq-container {
+    padding: 0 2%;
+  }
+  .team-member img {
+    width: 40%;
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    #contacto-metodo p {
-        margin: 0.5rem 0;
-    }
-
-    .contacto-div {
-        flex-direction: column;
-    }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+  .contact-social p {
+    margin: 0.5rem 0;
+  }
+  .contact-row {
+    flex-direction: column;
+  }
 }
 

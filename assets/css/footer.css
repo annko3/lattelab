@@ -9,32 +9,18 @@ footer {
 
 .footer-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 20px 30px;
+    padding: 2rem 10%;
     gap: 20px;
-
 }
 
-.footer-div {
+.footer-section {
     flex: 0 0 auto;
     min-width: 200px;
 }
-.centrado {
+.footer-bottom {
     width: 100%;
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
     border-top: 2px solid #5c4033;
 }
 
-
-.footer-div h4 {
-    color: #DDB899;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    border-bottom: 2px solid #5c4033;
-    padding-bottom: 8px;
-}
