@@ -49,7 +49,155 @@
     </header>
 
     <main>
-      
+      <section class="service-container">
+          <div id="service-form">
+            <form>
+
+              <div class="form-group">
+                <h2>Solicitar Servicio</h2>
+
+                <label for="type-service">Tipo de Servicio</label>
+                <select id="type-service" name="type-service" required>
+                  <option value="">Seleccione una opción</option>
+                  <option value="reservation">Reservaciones</option>
+                  <option value="event">Eventos</option>
+                  <option value="order">Pedidos</option>
+                </select>
+              </div>
+
+              <div id="reservation-options" class="service-options">
+                <h2>Reservaciones</h2>
+
+                <div class="form-group">
+                  <label for="reservation-date">Fecha de Reservación</label>
+                  <input type="date" id="reservation-date" name="reservation-date" />
+                </div>
+
+                <div class="form-group">
+                  <label for="reservation-time">Hora de Reservación</label>
+                  <input type="time" id="reservation-time" name="reservation-time" />
+                </div>
+
+                <div class="form-group">
+                  <label for="people-reservation">Número de Personas</label>
+                  <input type="number" id="people-reservation" name="people-reservation" min="1" />
+                </div>
+              </div>
+
+              <div id="event-options">
+                <h2>Eventos</h2>
+
+                <div class="form-group">
+                  <label for="type-event">Tipo de evento</label>
+                  <select name="type-event" id="type-event">
+                    <option value="">Seleccione una opción</option>
+                    <option value="cumpleaños">Cumpleaños</option>
+                    <option value="corporate">Evento corporativo</option>
+                    <option value="private">Evento privado</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-date">Fecha de Reservación</label>
+                  <input type="date" id="event-date" name="event-date" />
+                </div>
+
+                <div class="form-group">
+                  <label for="people-event">Número de Personas</label>
+                  <input type="number" id="people-event" name="people-event" min="1" value=""/>
+                </div>
+
+                <div class="form-group">
+                  <label for="event-duration">Duración del evento (horas)</label>
+                  <input type="number" id="event-duration" name="event-duration" min="1" value=""/>
+                </div>
+              </div>
+
+              <div id="order-options" class="service-options">
+                <h2>Pedidos</h2>
+
+                <div class="form-group">
+                  <label for="type-order">Tipo de pedido</label>
+                  <select name="type-order" id="type-order">
+                    <option value="">Seleccione una opción</option>
+                    <option value="local">Recoger a local</option>
+                    <option value="domicilio">Envio a domicilio</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="order-time">Hora de Recogida/Entrega</label>
+                  <input type="time" id="order-time" name="order-time">
+                </div>
+
+                <div class="coffee-selection">
+                  <div class="option-title">Seleccione sus productos</div>
+                  
+                  <div class="coffee-option">
+                      <span>Café Americano - $3.50</span>
+                      <input type="number" class="coffee-quantity" id="americano-qty" min="0" value="3.50">
+                  </div>
+                  <div class="coffee-option">
+                      <span>Cappuccino - $4.00</span>
+                      <input type="number" class="coffee-quantity" id="cappuccino-qty" min="0" value="4">
+                  </div>
+                  <div class="coffee-option">
+                      <span>Latte - $4.25</span>
+                      <input type="number" class="coffee-quantity" id="latte-qty" min="0" value="4.25">
+                  </div>
+                  <div class="coffee-option">
+                      <span>Mocha - $4.50</span>
+                      <input type="number" class="coffee-quantity" id="mocha-qty" min="0" value="4.50">
+                  </div>
+                  <div class="coffee-option">
+                      <span>Pastel de Chocolate - $5.00</span>
+                      <input type="number" class="coffee-quantity" id="cake-qty" min="0" value="5">
+                  </div>
+                  <div class="coffee-option">
+                      <span>Sandwich - $6.50</span>
+                      <input type="number" class="coffee-quantity" id="sandwich-qty" min="0" value="6.50">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="comentarios-pedido">Comentarios Especiales</label>
+                  <textarea id="comentarios-pedido" name="comentarios-pedido" rows="3"></textarea>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                  <h3>Servicios Adicionales</h3>
+                  <div class="menu-item">
+                      <label for="event-decoration">Decoración temática (+$100)</label>
+                      <input type="checkbox" id="event-decoration" name="event-decoration" value="100">
+                  </div>
+                  <div class="menu-item">
+                      <label for="custom-cake">Pastel personalizado (+$80)</label>
+                      <input type="checkbox" id="custom-cake" name="custom-cake" value="80">
+                  </div>
+                  <div class="menu-item">
+                      <label for="photographer">Servicio fotográfico (+$150)</label>
+                      <input type="checkbox" id="photographer" name="photographer" value="150">
+                  </div>
+                  <div class="menu-item">
+                      <label for="table-decoration">Decoración de mesa (+$15)</label>
+                      <input type="checkbox" id="table-decoration" name="table-decoration" value="15">
+                  </div>
+                  <div class="menu-item">
+                      <label for="special-menu">Menú especial (+$10 por persona)</label>
+                      <input type="checkbox" id="special-menu" name="special-menu" value="10">
+                  </div>
+              </div>
+
+              <div id="price-display" class="price-display">
+                <p>Precio estimado: <span id="total-price">$0.00</span></p>
+              </div>
+              <button type="submit">Enviar Solicitud</button>
+            </form>
+            
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -70,6 +218,7 @@
         <p>© 2023 Lattelab. All rights reserved.</p>
       </div>
     </footer>
+    <script src="../js/menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

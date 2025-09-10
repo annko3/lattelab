@@ -1,0 +1,15 @@
+:root {
+  --beige: #ddb899;
+  --brown-medium: #7b5232;
+  --brown-dark: #422d20;
+  --red: #8e1f1b;
+  --brown-pink: #8c5b4e;
+  --background: #f8f4ef;
+  --background-alt: #f0e6dd;
+  --white: #fff;
+}
+
+.service-container {
+  text-align: center;
+  background-color: var(--background-alt);
+}
