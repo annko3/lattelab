@@ -35,3 +35,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+function calculatePrice() {
+    let totalPrice = 0
+
+    let americanoQty =
+        parseInt(document.getElementById("americano-qty").value) > 0;
+    totalPrice += americanoQty * 3.5;
+
+    let cappuccinoQty =
+        parseInt(document.getElementById("cappuccino-qty").value) || 0;
+    totalPrice += cappuccinoQty * 4.0;
+
+    let latteQty = parseInt(document.getElementById("latte-qty").value) || 0;
+    totalPrice += latteQty * 4.25;
+
+    let mochaQty = parseInt(document.getElementById("mocha-qty").value) || 0;
+    totalPrice += mochaQty * 4.5;
+
+    let cakeQty = parseInt(document.getElementById("cake-qty").value) || 0;
+    totalPrice += cakeQty * 5.0;
+
+    let sandwichQty =
+        parseInt(document.getElementById("sandwich-qty").value) || 0;
+    totalPrice += sandwichQty * 6.5;
+
+    let decoration = document.getElementById("event-decoration").checked;
+    if (decoration) totalPrice += 100;
+
+    let customCake = document.getElementById("custom-cake").checked;
+    if (customCake) totalPrice += 80;
+
+    let photographer = document.getElementById("photographer").checked;
+    if (photographer) totalPrice += 150;
+
+    let tableDecoration = document.getElementById("table-decoration").checked;
+    if (tableDecoration) totalPrice += 15;
+
+    let specialMenuEvent = document.getElementById("special-menu").checked;
+    if (specialMenuEvent) {
+        let peopleEvent = parseInt(document.getElementById("people-event").value) || 0;
+        totalPrice += peopleEvent * 10;
+    }
+    
+    let specialMenuReservation = document.getElementById("special-menu").checked;
+    if (specialMenuReservation) {
+        let peopleReservation = parseInt(document.getElementById("people-reservation").value) || 0;
+        totalPrice += peopleReservation * 10;
+    }
+
+}
