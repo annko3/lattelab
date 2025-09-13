@@ -68,3 +68,32 @@ button:hover{
   border-color: var(--red);
   border-width: 3px;
 }
+
+@media (max-width: 768px) {
+  #service-form {
+    grid-template-columns: 1fr;
+    padding: 0 5%; 
+  }
+    
+  .coffee-selection {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  #service-form {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 3rem;
+  }
+  .coffee-selection {
+    display: grid;
+    grid-template-columns: 1fr; 
+  }
+  section {
+    padding: 32px 0; 
+  }
+  input, select, textarea, button {
+    width: 100%;
+  }
+}
