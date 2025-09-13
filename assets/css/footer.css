@@ -12,6 +12,8 @@ footer {
     justify-content: space-between;
     padding: 2rem 10%;
     gap: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .footer-section {
@@ -24,12 +26,51 @@ footer {
     border-top: 2px solid #5c4033;
 }
 
+@media (max-width: 768px) {
+            .footer-container {
+                gap: 30px;
+                padding: 1.5rem 0;
+            }
+            
+            .footer-section {
+                min-width: 180px;
+            }
+        }
+
 @media (max-width: 480px) {
+
+     footer {
+                padding: 30px 5%;
+            }
+
     .footer-container {
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
         padding: 2rem 10%;
         gap: 20px;
+        padding: 1rem 0;
+    }
+
+    .footer-section{
+        flex: none;
+        min-width: 100%;
     }
 }
+
+@media (max-width: 360px) {
+            footer {
+                padding: 20px 5%;
+            }
+            
+            .footer-section h4 {
+                font-size: 0.9rem;
+
+            }
+            
+            .footer-section p {
+                font-size: 0.9rem;
+            }
+            
+            .footer-bottom p {
+                font-size: 0.9rem;
+            }
+        }
