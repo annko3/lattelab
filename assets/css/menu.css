@@ -82,7 +82,7 @@ button:hover{
   }
     
   .coffee-selection {
-    grid-template-row : repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
   }
 }
 
