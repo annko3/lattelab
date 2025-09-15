@@ -21,6 +21,8 @@
 body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .main-content {            
@@ -85,5 +87,9 @@ h3 {
     flex-direction: column;
     gap: var(--gap-pequeno);
     padding: 10px;
+  }
+
+  body {
+    min-width: 290px;
   }
 }
