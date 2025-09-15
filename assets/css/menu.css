@@ -68,6 +68,12 @@ button:hover{
   border-color: var(--red);
   border-width: 3px;
 }
+@media (max-width: 991px) {
+  .coffee-selection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
 
 @media (max-width: 768px) {
   #service-form {
@@ -76,7 +82,7 @@ button:hover{
   }
     
   .coffee-selection {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-row : repeat(2, 1fr); 
   }
 }
 
