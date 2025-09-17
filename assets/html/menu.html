@@ -71,17 +71,17 @@
 
                   <div class="form-group">
                     <label for="reservation-date">Fecha de Reservación</label>
-                    <input type="date" id="reservation-date" name="reservation-date" />
+                    <input type="date" id="reservation-date" name="reservation-date" required/>
                   </div>
 
                   <div class="form-group">
                     <label for="reservation-time">Hora de Reservación</label>
-                    <input type="time" id="reservation-time" name="reservation-time" />
+                    <input type="time" id="reservation-time" name="reservation-time" required/>
                   </div>
 
                   <div class="form-group">
                     <label for="people-reservation">Número de Personas</label>
-                    <input type="number" id="people-reservation" name="people-reservation" min="1" />
+                    <input type="number" id="people-reservation" name="people-reservation" min="1" required/>
                   </div>
                 </div>
 
@@ -90,7 +90,7 @@
 
                   <div class="form-group">
                     <label for="type-event">Tipo de evento</label>
-                    <select name="type-event" id="type-event">
+                    <select name="type-event" id="type-event" required>
                       <option value="">Seleccione una opción</option>
                       <option value="cumpleaños">Cumpleaños</option>
                       <option value="corporate">Evento corporativo</option>
@@ -100,17 +100,17 @@
 
                   <div class="form-group">
                     <label for="event-date">Fecha de Reservación</label>
-                    <input type="date" id="event-date" name="event-date" />
+                    <input type="date" id="event-date" name="event-date" required/>
                   </div>
 
                   <div class="form-group">
                     <label for="people-event">Número de Personas</label>
-                    <input type="number" id="people-event" name="people-event" min="1" value=""/>
+                    <input type="number" id="people-event" name="people-event" min="1" value="" required/>
                   </div>
 
                   <div class="form-group">
                     <label for="event-duration">Duración del evento (horas)</label>
-                    <input type="number" id="event-duration" name="event-duration" min="1" value=""/>
+                    <input type="number" id="event-duration" name="event-duration" min="1" value="" required/>
                   </div>
                 </div>
 
@@ -119,7 +119,7 @@
 
                   <div class="form-group">
                     <label for="type-order">Tipo de pedido</label>
-                    <select name="type-order" id="type-order">
+                    <select name="type-order" id="type-order" required>
                       <option value="">Seleccione una opción</option>
                       <option value="local">Recoger a local</option>
                       <option value="domicilio">Envio a domicilio</option>
@@ -128,7 +128,7 @@
 
                   <div class="form-group">
                     <label for="order-time">Hora de Recogida/Entrega</label>
-                    <input type="time" id="order-time" name="order-time">
+                    <input type="time" id="order-time" name="order-time" required>
                   </div>
 
                   <h3>Seleccione sus productos</h3>

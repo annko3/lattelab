@@ -30,36 +30,95 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     let priceInputs = [
-        "americano-qty",
-        "cappuccino-qty",
-        "latte-qty",
-        "mocha-qty",
-        "cake-qty",
-        "sandwich-qty",
-        "event-decoration",
-        "custom-cake",
-        "photographer",
-        "table-decoration",
-        "special-menu",
-        "people-event",
-        "people-reservation",
+      "americano-qty",
+      "cappuccino-qty",
+      "latte-qty",
+      "mocha-qty",
+      "cake-qty",
+      "sandwich-qty",
+      "event-decoration",
+      "custom-cake",
+      "photographer",
+      "table-decoration",
+      "special-menu",
+      "people-event",
+      "people-reservation",
     ];
 
     priceInputs.forEach((inputId) => {
-        let input = document.getElementById(inputId);
-        if (input) {
+      let input = document.getElementById(inputId);
+      if (input) {
         input.addEventListener("input", calculatePrice);
         input.addEventListener("change", calculatePrice);
-        }
+      }
     });
 
     let submitButton = document.getElementById("submit-button");
-    submitButton.addEventListener("click", function () {
+    submitButton.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      if (validateForm()) {
         alert(
-        `¡Encargo realizado con éxito! Total a pagar: $${calculatePrice().toFixed(2)}`
+          `¡Encargo realizado con éxito! Total a pagar: $${calculatePrice().toFixed(2)}`
         );
+      } 
     });
 });
+
+function validateForm() {
+  let typeService = document.getElementById("type-service").value;
+  let missingFields = [];
+
+  // Validación según el tipo de servicio seleccionado
+  if (!typeService) {
+    alert("Por favor complete el tipo de servicio");
+    return false;
+  }
+
+  //Validación de reservacion
+  if (typeService === "reservation") {
+    let reservationFields = ["reservation-date", "reservation-time", "people-reservation"];
+    
+    reservationFields.forEach(inputId => {
+      let input = document.getElementById(inputId);
+      if (input && !input.value) {
+        let fieldName = input.previousElementSibling?.textContent || inputId;
+        missingFields.push(fieldName);
+      }
+    });
+
+  //Validación de evento
+  } else if (typeService === "event") {
+    let eventFields = ["type-event", "event-date", "people-event", "event-duration"];
+    
+    eventFields.forEach(inputId => {
+      let input = document.getElementById(inputId);
+      if (input && !input.value) {
+        let fieldName = input.previousElementSibling?.textContent || inputId;
+        missingFields.push(fieldName);
+      }
+    });
+
+  //Validacion de pedido
+  } else if (typeService === "order") {
+    let orderFields = ["type-order", "order-time"];
+    
+    orderFields.forEach(inputId => {
+      let input = document.getElementById(inputId);
+      if (input && !input.value) {
+        let fieldName = input.previousElementSibling?.textContent || inputId;
+        missingFields.push(fieldName);
+      }
+    });
+  }
+
+  if (missingFields.length > 0) {
+      alert("Por favor complete los siguientes campos:\n\n• " + missingFields.join("\n• "));
+      return false;
+  }
+
+  return true;
+}
 
 function calculatePrice() {
   let totalPrice = 0;
